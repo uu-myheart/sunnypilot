@@ -34,7 +34,7 @@ class TiciFanController(BaseFanController):
     #                ))
     
     fan_pwr_out = int(np.interp(cur_temp, [60.0, 80.0], [0, 80]))
-    fan_pwr_out = max(0, min(70, fan_pwr_out))
+    fan_pwr_out = max(0, min(60, fan_pwr_out))
     self.last_ignition = ignition
     return fan_pwr_out
 
